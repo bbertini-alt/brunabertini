@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0099ff, #00ffaa);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: white;
+    color: #0099ff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.dark {
+    background: #f4f4f4;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
