@@ -106,9 +106,12 @@ body {
 }
 
 .sobre-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
     display: block;
-    width: auto;            /* mantém tamanho original */
-    height: auto;           /* mantém proporção */
-    max-width: none;        /* impede que o CSS reduza */
-    image-rendering: auto;  /* melhor qualidade possível */
+    margin: 20px auto;
 }
+
+
