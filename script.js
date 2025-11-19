@@ -20,3 +20,22 @@ window.addEventListener("scroll", () => {
         hero.classList.remove("scrolled");
     }
 });
+/* CARROSSEL DE PROJETOS */
+const track = document.querySelector('.carousel-track');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+if (track && nextBtn && prevBtn) {
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    });
+}
