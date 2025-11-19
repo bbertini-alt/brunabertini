@@ -114,53 +114,92 @@ body {
 .card:hover {
     transform: translateY(-5px);
 }
-/* Carrossel */
+/* ====== CARROSSEL RESPONSIVO ====== */
 .carousel {
-    position: relative;
     width: 100%;
     max-width: 900px;
-    overflow: hidden;
     margin: 0 auto;
-    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-.carousel-track {
+.carousel-inner {
     display: flex;
     transition: transform 0.4s ease-in-out;
 }
 
-.carousel-track img {
+.carousel-inner img {
     width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    object-fit: contain;
+    height: auto;      /* garante que não estica no celular */
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Botões do carrossel */
-.carousel-btn {
+/* BOTÕES do carrossel */
+.carousel button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
-    color: white;
+    background: #ffffffc7;
     border: none;
-    padding: 0.7rem 1rem;
-    font-size: 2rem;
+    padding: 0.6rem 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.2s;
+    font-size: 1.2rem;
+    border-radius: 6px;
 }
 
-.carousel-btn:hover {
-    background: rgba(0,0,0,0.6);
-}
-
-.prev {
+/* Botão esquerdo */
+.carousel .prev {
     left: 10px;
 }
-
-.next {
+/* Botão direito */
+.carousel .next {
     right: 10px;
+}
+
+/* ====== Ajuste específico para CELULAR ====== */
+@media (max-width: 768px) {
+
+    /* reduz espaço exagerado da seção */
+    #projetos.section {
+        padding: 2rem 0 !important;
+    }
+
+    .carousel {
+        max-height: 300px;     /* controla o tamanho */
+    }
+
+    .carousel-inner img {
+        max-height: 300px;     /* evita gigantismo */
+        object-fit: contain;   /* não corta a imagem */
+    }
+
+    .carousel button {
+        padding: 0.4rem 0.7rem;
+        font-size: 1rem;
+    }
+}
+* ====== Ajuste específico para CELULAR ====== */
+@media (max-width: 768px) {
+
+    /* reduz espaço exagerado da seção */
+    #projetos.section {
+        padding: 2rem 0 !important;
+    }
+
+    .carousel {
+        max-height: 300px;     /* controla o tamanho */
+    }
+
+    .carousel-inner img {
+        max-height: 300px;     /* evita gigantismo */
+        object-fit: contain;   /* não corta a imagem */
+    }
+
+    .carousel button {
+        padding: 0.4rem 0.7rem;
+        font-size: 1rem;
+    }
 }
 /* Formulário de Contato */
 .contato-form {
