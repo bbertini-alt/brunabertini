@@ -39,3 +39,18 @@ if (track && nextBtn && prevBtn) {
         track.style.transform = `translateX(-${index * 100}%)`;
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+
+    let index = 0;
+    const slides = document.querySelectorAll(".carousel-inner img");
+    const inner = document.querySelector(".carousel-inner");
+
+    function showSlide(i) {
+        index = (i + slides.length) % slides.length;
+        inner.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    document.querySelector(".next").onclick = () => showSlide(index + 1);
+    document.querySelector(".prev").onclick = () => showSlide(index - 1);
+
+});
